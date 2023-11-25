@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:getx/app/modules/artikel/views/artikel_view.dart';
+import 'package:getx/app/routes/app_pages.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -20,9 +21,8 @@ class HomeView extends GetView<HomeController> {
             InkWell(
               onTap: () {
                 debugPrint("dari home menuju detail artikel");
-                Get.to(() => ArtikelView(),
+                Get.toNamed(Routes.ARTIKEL,
                     arguments: {"idArtikel": "1111", "detail": "news"},
-                    transition: Transition.circularReveal,
                     preventDuplicates: false);
               },
               child: const Text(
@@ -33,9 +33,8 @@ class HomeView extends GetView<HomeController> {
             InkWell(
               onTap: () {
                 debugPrint("dari home menuju detail artikel");
-                Get.to(() => ArtikelView(),
+                Get.toNamed(Routes.ARTIKEL,
                     arguments: {"idArtikel": "2222", "detail": "news"},
-                    transition: Transition.circularReveal,
                     preventDuplicates: false);
               },
               child: const Text(
@@ -46,9 +45,8 @@ class HomeView extends GetView<HomeController> {
             InkWell(
               onTap: () {
                 debugPrint("dari home menuju detail artikel");
-                Get.to(() => ArtikelView(),
+                Get.toNamed(Routes.ARTIKEL,
                     arguments: {"idArtikel": "3333", "detail": "news"},
-                    transition: Transition.circularReveal,
                     preventDuplicates: false);
               },
               child: const Text(

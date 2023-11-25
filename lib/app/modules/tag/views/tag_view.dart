@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:getx/app/modules/artikel/views/artikel_view.dart';
+import 'package:getx/app/routes/app_pages.dart';
 
 import '../controllers/tag_controller.dart';
 
@@ -22,9 +23,8 @@ class TagView extends GetView<TagController> {
             InkWell(
               onTap: () {
                 debugPrint("dari home menuju detail artikel");
-                Get.to(() => ArtikelView(),
+                Get.toNamed(Routes.ARTIKEL,
                     arguments: {"idArtikel": "4444", "detail": "news"},
-                    transition: Transition.circularReveal,
                     preventDuplicates: false);
               },
               child: Text(
@@ -35,9 +35,8 @@ class TagView extends GetView<TagController> {
             InkWell(
               onTap: () {
                 debugPrint("dari home menuju detail artikel");
-                Get.to(() => ArtikelView(),
+                Get.toNamed(Routes.ARTIKEL,
                     arguments: {"idArtikel": "5555", "detail": "news"},
-                    transition: Transition.circularReveal,
                     preventDuplicates: false);
               },
               child: Text(
@@ -48,9 +47,8 @@ class TagView extends GetView<TagController> {
             InkWell(
               onTap: () {
                 debugPrint("dari home menuju detail artikel");
-                Get.to(() => ArtikelView(),
+                Get.toNamed(Routes.ARTIKEL,
                     arguments: {"idArtikel": "6666", "detail": "news"},
-                    transition: Transition.circularReveal,
                     preventDuplicates: false);
               },
               child: Text(

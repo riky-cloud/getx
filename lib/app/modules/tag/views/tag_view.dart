@@ -19,15 +19,15 @@ class TagView extends GetView<TagController> {
       body: Center(
         child: Column(
           children: [
-            Text("Parameter => "+controller.alias),
+            Text("Parameter => " + controller.alias),
             InkWell(
               onTap: () {
                 debugPrint("dari home menuju detail artikel");
-                Get.toNamed(Routes.ARTIKEL,
+                Get.toNamed('/artikel/id-artikel-4',
                     arguments: {"idArtikel": "4444", "detail": "news"},
                     preventDuplicates: false);
               },
-              child: Text(
+              child: const Text(
                 'link artikel 4 ',
                 style: TextStyle(fontSize: 20),
               ),
@@ -35,11 +35,11 @@ class TagView extends GetView<TagController> {
             InkWell(
               onTap: () {
                 debugPrint("dari home menuju detail artikel");
-                Get.toNamed(Routes.ARTIKEL,
+                Get.toNamed('/artikel/id-artikel-5',
                     arguments: {"idArtikel": "5555", "detail": "news"},
                     preventDuplicates: false);
               },
-              child: Text(
+              child: const Text(
                 'link artikel 5 ',
                 style: TextStyle(fontSize: 20),
               ),
@@ -47,11 +47,11 @@ class TagView extends GetView<TagController> {
             InkWell(
               onTap: () {
                 debugPrint("dari home menuju detail artikel");
-                Get.toNamed(Routes.ARTIKEL,
+                Get.toNamed('/artikel/id-artikel-6',
                     arguments: {"idArtikel": "6666", "detail": "news"},
                     preventDuplicates: false);
               },
-              child: Text(
+              child: const Text(
                 'link artikel 6 ',
                 style: TextStyle(fontSize: 20),
               ),

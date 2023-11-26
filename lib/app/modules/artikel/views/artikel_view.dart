@@ -10,7 +10,8 @@ class ArtikelView extends GetView<ArtikelController> {
   const ArtikelView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    Get.lazyPut(() => ArtikelController());
+    // Get.lazyPut(() => ArtikelController());
+    controller.loadmore(Get.parameters['id'].toString());
     return Scaffold(
       appBar: AppBar(
         title: const Text('ArtikelView'),
@@ -19,11 +20,14 @@ class ArtikelView extends GetView<ArtikelController> {
       body: Center(
         child: Column(
           children: [
-            Text("Parameter => "+controller.idArtikel),   
+            // Obx(() =>  Text("Parameter => "+controller.id.toString())
+            // ),
+
+            Text("Parameter => " + Get.parameters['id'].toString()),
             InkWell(
               onTap: () {
                 debugPrint("klik dari artikel menuju detail tag");
-                Get.toNamed(Routes.TAG,
+                Get.toNamed('/tag/test-alias-par-1',
                     arguments: {"alias": "test-alias-11"},
                     preventDuplicates: false);
               },
@@ -35,7 +39,7 @@ class ArtikelView extends GetView<ArtikelController> {
             InkWell(
               onTap: () {
                 debugPrint("klik dari artikel menuju detail tag");
-                Get.toNamed(Routes.TAG,
+                Get.toNamed('/tag/test-alias-par-2',
                     arguments: {"alias": "test-alias-22"},
                     preventDuplicates: false);
               },
@@ -47,8 +51,8 @@ class ArtikelView extends GetView<ArtikelController> {
             InkWell(
               onTap: () {
                 debugPrint("klik dari artikel menuju detail tag");
-                Get.toNamed(Routes.TAG,
-                    arguments: {"alias": "test-alias-33"},
+                Get.toNamed('/tag/test-alias-par-3',
+                    arguments: {"alias--": "test-alias-33"},
                     preventDuplicates: false);
               },
               child: const Text(

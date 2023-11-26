@@ -21,7 +21,7 @@ class HomeView extends GetView<HomeController> {
             InkWell(
               onTap: () {
                 debugPrint("dari home menuju detail artikel");
-                Get.toNamed(Routes.ARTIKEL,
+                Get.toNamed('/artikel/id-artikel-1',
                     arguments: {"idArtikel": "1111", "detail": "news"},
                     preventDuplicates: false);
               },
@@ -33,7 +33,7 @@ class HomeView extends GetView<HomeController> {
             InkWell(
               onTap: () {
                 debugPrint("dari home menuju detail artikel");
-                Get.toNamed(Routes.ARTIKEL,
+                Get.toNamed('/artikel/id-artikel-2',
                     arguments: {"idArtikel": "2222", "detail": "news"},
                     preventDuplicates: false);
               },
@@ -45,7 +45,7 @@ class HomeView extends GetView<HomeController> {
             InkWell(
               onTap: () {
                 debugPrint("dari home menuju detail artikel");
-                Get.toNamed(Routes.ARTIKEL,
+                Get.toNamed('/artikel/id-artikel-3',
                     arguments: {"idArtikel": "3333", "detail": "news"},
                     preventDuplicates: false);
               },

@@ -3,7 +3,8 @@ import 'package:get/get.dart';
 
 class TagController extends GetxController {
   //TODO: Implement TagController
-  String alias = Get.arguments['alias'];
+  String alias = Get.parameters['alias'].toString();
+  // String alias = Get.arguments['alias'];
 
 
   final count = 0.obs;
